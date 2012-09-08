@@ -7,7 +7,13 @@ gem 'rails', '3.2.8'
 
 #gem 'sqlite3'
 
-gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
+group :production do
+  gem 'pg'
+end
+
+group :production do
+	gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
+end
 
 group :development do
   gem 'rspec-rails', '2.5.0'
