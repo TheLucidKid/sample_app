@@ -20,4 +20,9 @@ describe "LayoutLinks" do
     get help_path
     response.should have_selector('title', :content => "Aide")
   end
+  
+  it "devrait trouver une page d'inscription a '/signup'" do
+    get signup_path
+    response.should have_selector('title', :content => "Inscription")
+  end
 end
